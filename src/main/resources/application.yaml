@@ -1,0 +1,66 @@
+spring:
+  # Database
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: "jdbc:h2:mem:voteforlunch;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE" # https://stackoverflow.com/a/52481318/20265936
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      #  http://docs.jboss.org/hibernate/orm/5.3/userguide/html_single/Hibernate_User_Guide.html#configurations
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 20
+        jdbc.batch_size: 20  # https://stackoverflow.com/questions/21257819/what-is-the-difference-between-hibernate-jdbc-fetch-size-and-hibernate-jdbc-batc
+        use_sql_comments: true
+    show-sql: true
+    open-in-view: false
+    defer-datasource-initialization: true  # https://stackoverflow.com/a/67678945/548473
+
+  # Jackson Serialization Issue Resolver
+  jackson:
+    visibility:
+      field: any
+      getter: none
+      setter: none
+      is-getter: none
+
+  # Spring Boot color console
+  output.ansi.enabled: always
+
+  # Cache
+  # https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties-cache
+  cache:
+    cache-names: menu,menus,voteDistribution
+    caffeine.spec: maximumSize=5000,expireAfterAccess=5m
+
+# Logging
+logging:
+  level:
+    root: WARN
+    ru.jsft.voteforlunch: DEBUG
+    org.springframework.orm.jpa: DEBUG
+    org.springframework.security: DEBUG
+
+# Springdoc
+springdoc.swagger-ui.docExpansion: none
+
+# Server configuration
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8 # Charset of HTTP requests and responses. Added to the "Content-Type" header if not set explicitly
+      enabled: true # Enable http encoding support
+      force: true
+
+# Application-specific settings
+vote.time.constraint: "11:00"  # the time after which the user can not change his vote
