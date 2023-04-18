@@ -13,3 +13,8 @@ target/
 
 # Log files
 log
+
+# Maven
+mvnw
+mvnw.cmd
+.mvn
