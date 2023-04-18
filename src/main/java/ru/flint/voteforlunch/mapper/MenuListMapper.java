@@ -1,8 +1,10 @@
 package ru.flint.voteforlunch.mapper;
 
+import org.springframework.stereotype.Component;
 import ru.flint.voteforlunch.dto.MenuListDTO;
 import ru.flint.voteforlunch.model.Menu;
 
+@Component
 public class MenuListMapper implements Mapper<Menu, MenuListDTO> {
     @Override
     public Menu toEntity(MenuListDTO dto) {
