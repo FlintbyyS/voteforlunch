@@ -46,7 +46,7 @@ spring:
 logging:
   level:
     root: WARN
-    ru.jsft.voteforlunch: DEBUG
+    ru.flint.voteforlunch: DEBUG
     org.springframework.orm.jpa: DEBUG
     org.springframework.security: DEBUG
 
