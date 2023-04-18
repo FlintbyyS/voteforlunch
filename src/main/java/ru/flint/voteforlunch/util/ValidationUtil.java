@@ -23,7 +23,7 @@ public class ValidationUtil {
     }
 
     @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
-    public static <T> T checkWasFound(@NonNull Optional<T> obj, long id, Class<T> clazz) {
+    public static <T> T checkFound(@NonNull Optional<T> obj, long id, Class<T> clazz) {
         if (obj.isEmpty()) {
             throw new IllegalRequestDataException(String.format("%s with id = %d not found", clazz.getSimpleName(), id));
         }
