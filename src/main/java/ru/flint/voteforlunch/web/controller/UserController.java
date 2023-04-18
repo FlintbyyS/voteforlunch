@@ -34,12 +34,12 @@ public class UserController {
 
     @GetMapping
     public List<UserDTO> getAll() {
-        return service.getAllSorted().stream().map(mapper::toDto).toList();
+        return service.getAllSorted().stream().map(mapper::toDTO).toList();
     }
 
     @GetMapping("/{id}")
     public UserDTO get(@PathVariable long id) {
-        return mapper.toDto(service.getById(id));
+        return mapper.toDTO(service.getById(id));
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
@@ -49,7 +49,7 @@ public class UserController {
         URI uriOfNewResource = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path(REST_URL + "/{id}")
                 .buildAndExpand(created.getId()).toUri();
-        return ResponseEntity.created(uriOfNewResource).body(mapper.toDto(created));
+        return ResponseEntity.created(uriOfNewResource).body(mapper.toDTO(created));
     }
 
     @DeleteMapping("/{id}")
@@ -59,7 +59,7 @@ public class UserController {
     }
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public UserDTO update(@Valid @RequestBody UserDTO userDTO, @PathVariable long id) {
-        return mapper.toDto(service.update(id,mapper.toEntity(userDTO)));
+        return mapper.toDTO(service.update(id,mapper.toEntity(userDTO)));
     }
 
     @GetMapping("/profile")

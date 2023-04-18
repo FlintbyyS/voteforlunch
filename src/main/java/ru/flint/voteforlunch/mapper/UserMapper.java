@@ -27,7 +27,7 @@ public class UserMapper implements Mapper<User, UserDTO>{
     }
 
     @Override
-    public UserDTO toDto(User entity) {
+    public UserDTO toDTO(User entity) {
         return new UserDTO(
                 entity.getId(),
                 entity.getEmail(),
