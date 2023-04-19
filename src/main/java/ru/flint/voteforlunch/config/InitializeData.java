@@ -1,6 +1,7 @@
 package ru.flint.voteforlunch.config;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import ru.flint.voteforlunch.model.Role;
 import ru.flint.voteforlunch.model.User;
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@Component
 public class InitializeData implements CommandLineRunner {
     private final UserRepository userRepository;
     private final Clock clock;

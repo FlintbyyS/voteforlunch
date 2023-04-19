@@ -23,7 +23,7 @@ import java.util.TreeSet;
                 @Index(name = "menu_restaurant_id_index",columnList = "RESTAURANT_ID")
         },
         uniqueConstraints = {
-        @UniqueConstraint(name = "uc_menu_date_of_menu", columnNames = {"DATE_OF_MENU", "RESTAURANT_ID"})
+        @UniqueConstraint(name = "uc_menu_date_of_menu", columnNames = {"MENU_DATE", "RESTAURANT_ID"})
 })
 public class Menu extends AbstractEntity{
 
