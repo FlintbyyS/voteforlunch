@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -40,6 +41,15 @@ public class SecurityConfiguration {
             return new AuthorizedUser(optionalUser.orElseThrow(
                     () -> new UsernameNotFoundException("User '" + email + "' not found")));
         };
+    }
+
+    //  https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter#configuring-websecurity
+    //  https://stackoverflow.com/a/61147599/548473
+    @Bean
+    public WebSecurityCustomizer webSecurityCustomizer() {
+        return web -> web
+                .ignoring()
+                .requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**");
     }
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
