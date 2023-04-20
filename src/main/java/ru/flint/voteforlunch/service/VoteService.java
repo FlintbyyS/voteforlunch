@@ -34,7 +34,7 @@ public class VoteService {
                        UserRepository userRepository,
                        RestaurantRepository restaurantRepository,
                        Clock clock,
-                       @Value("${vote.time.constraint") LocalTime timeConstraint) {
+                       @Value("${vote.time.constraint}") LocalTime timeConstraint) {
 
         this.repository = repository;
         this.userRepository = userRepository;

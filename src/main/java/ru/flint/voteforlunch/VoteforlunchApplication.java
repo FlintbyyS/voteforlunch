@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VoteForLunchApplication {
+public class VoteforlunchApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(VoteForLunchApplication.class, args);
+        SpringApplication.run(VoteforlunchApplication.class, args);
     }
 
 }
