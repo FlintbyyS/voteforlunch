@@ -30,7 +30,7 @@ public class MenuItem extends AbstractEntity implements Comparable<MenuItem>{
     @ToString.Exclude
     private Menu menu;
     @NotNull
-    @Positive
+    @Positive(message = "Price must be positive")
     @Column(name = "price",nullable = false)
     private Integer price;
 

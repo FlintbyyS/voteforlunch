@@ -35,7 +35,7 @@ public class MenuControllerTest extends AbstractSpringBootTest {
             "menuItems", "must not be empty")));
 
     private static final LinkedHashMapMatcher DISH_PRICE_CONSTRAINTS_MATCHER = new LinkedHashMapMatcher(new LinkedHashMap<>(Map.of(
-            "price", "должно быть больше 0")));
+            "price", "Price must be positive")));
 
     public static MatcherFactory.Matcher<MenuListDTO> MENU_LIST_DTO_MATCHER = MatcherFactory.usingEqualsComparator(MenuListDTO.class);
     public static MatcherFactory.Matcher<MenuResponseDTO> MENU_RESPONSE_DTO_MATCHER = MatcherFactory.usingEqualsComparator(MenuResponseDTO.class);
