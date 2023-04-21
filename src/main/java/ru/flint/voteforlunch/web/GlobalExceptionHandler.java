@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-import ru.flint.voteforlunch.exceptions.ApplicationException;
-import ru.flint.voteforlunch.exceptions.VoteTimeConstraintException;
+import ru.flint.voteforlunch.util.exceptions.ApplicationException;
+import ru.flint.voteforlunch.util.exceptions.VoteTimeConstraintException;
 import ru.flint.voteforlunch.util.ValidationUtil;
 
 import java.util.LinkedHashMap;

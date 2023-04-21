@@ -1,4 +1,4 @@
-package ru.flint.voteforlunch.mapper;
+package ru.flint.voteforlunch.web.mapper;
 
 public interface RequestResponseMapper<E, RequestType, ResponseType> {
 

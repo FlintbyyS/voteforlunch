@@ -1,4 +1,4 @@
-package ru.flint.voteforlunch.dto;
+package ru.flint.voteforlunch.web.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
@@ -8,7 +8,7 @@ import jakarta.validation.constraints.Size;
 import lombok.EqualsAndHashCode;
 import lombok.Value;
 import ru.flint.voteforlunch.model.Role;
-import ru.flint.voteforlunch.util.NoHtml;
+import ru.flint.voteforlunch.util.annotation.NoHtml;
 
 
 import java.util.Set;

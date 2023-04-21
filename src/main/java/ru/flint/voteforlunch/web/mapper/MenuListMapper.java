@@ -1,7 +1,7 @@
-package ru.flint.voteforlunch.mapper;
+package ru.flint.voteforlunch.web.mapper;
 
 import org.springframework.stereotype.Component;
-import ru.flint.voteforlunch.dto.MenuListDTO;
+import ru.flint.voteforlunch.web.dto.MenuListDTO;
 import ru.flint.voteforlunch.model.Menu;
 
 @Component

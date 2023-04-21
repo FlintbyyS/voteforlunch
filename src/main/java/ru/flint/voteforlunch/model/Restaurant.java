@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
-import ru.flint.voteforlunch.util.NoHtml;
+import ru.flint.voteforlunch.util.annotation.NoHtml;
 
 @NoArgsConstructor
 @AllArgsConstructor

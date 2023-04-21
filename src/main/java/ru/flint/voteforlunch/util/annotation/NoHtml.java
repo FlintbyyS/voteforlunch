@@ -1,4 +1,4 @@
-package ru.flint.voteforlunch.util;
+package ru.flint.voteforlunch.util.annotation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

@@ -4,8 +4,8 @@ import jakarta.validation.constraints.NotNull;
 import lombok.experimental.UtilityClass;
 import org.springframework.core.NestedExceptionUtils;
 import org.springframework.lang.NonNull;
-import ru.flint.voteforlunch.dto.AbstractDTO;
-import ru.flint.voteforlunch.exceptions.IllegalRequestDataException;
+import ru.flint.voteforlunch.web.dto.AbstractDTO;
+import ru.flint.voteforlunch.util.exceptions.IllegalRequestDataException;
 
 import java.util.Optional;
 

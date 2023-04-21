@@ -9,7 +9,7 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
-import ru.flint.voteforlunch.util.NoHtml;
+import ru.flint.voteforlunch.util.annotation.NoHtml;
 import ru.flint.voteforlunch.web.security.PasswordDeserializer;
 
 import java.io.Serializable;

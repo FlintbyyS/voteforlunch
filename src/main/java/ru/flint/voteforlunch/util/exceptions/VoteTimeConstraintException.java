@@ -1,4 +1,4 @@
-package ru.flint.voteforlunch.exceptions;
+package ru.flint.voteforlunch.util.exceptions;
 
 import org.springframework.http.HttpStatus;
 

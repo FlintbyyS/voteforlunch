@@ -1,4 +1,4 @@
-package ru.flint.voteforlunch.dto;
+package ru.flint.voteforlunch.web.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

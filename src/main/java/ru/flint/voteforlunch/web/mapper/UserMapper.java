@@ -1,8 +1,8 @@
-package ru.flint.voteforlunch.mapper;
+package ru.flint.voteforlunch.web.mapper;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-import ru.flint.voteforlunch.dto.UserDTO;
+import ru.flint.voteforlunch.web.dto.UserDTO;
 import ru.flint.voteforlunch.model.User;
 @Component
 public class UserMapper implements Mapper<User, UserDTO>{

@@ -6,8 +6,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import ru.flint.voteforlunch.dto.RestaurantDTO;
-import ru.flint.voteforlunch.mapper.RestaurantMapper;
+import ru.flint.voteforlunch.web.dto.RestaurantDTO;
+import ru.flint.voteforlunch.web.mapper.RestaurantMapper;
 import ru.flint.voteforlunch.model.Restaurant;
 import ru.flint.voteforlunch.service.RestaurantService;
 

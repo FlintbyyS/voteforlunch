@@ -9,11 +9,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import ru.flint.voteforlunch.dto.MenuListDTO;
-import ru.flint.voteforlunch.dto.MenuRequestDTO;
-import ru.flint.voteforlunch.dto.MenuResponseDTO;
-import ru.flint.voteforlunch.mapper.MenuListMapper;
-import ru.flint.voteforlunch.mapper.MenuMapper;
+import ru.flint.voteforlunch.web.dto.MenuListDTO;
+import ru.flint.voteforlunch.web.dto.MenuRequestDTO;
+import ru.flint.voteforlunch.web.dto.MenuResponseDTO;
+import ru.flint.voteforlunch.web.mapper.MenuListMapper;
+import ru.flint.voteforlunch.web.mapper.MenuMapper;
 import ru.flint.voteforlunch.model.Menu;
 import ru.flint.voteforlunch.service.MenuService;
 
