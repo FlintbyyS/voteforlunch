@@ -25,7 +25,7 @@ import java.util.Set;
 @AllArgsConstructor
 @ToString(callSuper = true, exclude = {"password"})
 public class User extends AbstractEntity implements Serializable{
-    @Column(name = "email", nullable = false, unique = true)
+    @Column(name = "email", nullable = false)
     @Email(message = "Enter valid e-mail")
     @NoHtml
     @Size(max = 128)
