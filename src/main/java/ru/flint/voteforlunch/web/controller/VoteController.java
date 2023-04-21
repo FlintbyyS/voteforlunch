@@ -46,6 +46,7 @@ public class VoteController {
 
     @PostMapping
     @Transactional
+    @ResponseStatus(HttpStatus.CREATED)
     public VoteDTO vote(@RequestParam("restaurantId") long restaurantId
             , @AuthenticationPrincipal AuthorizedUser authorizedUser){
        return mapper.toDTO(service.saveAndReturnWithDetails(restaurantId,authorizedUser.id()));
